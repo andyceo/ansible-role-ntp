@@ -1,0 +1,17 @@
+- name: ntp-start
+  service:
+    name=ntp
+    start=started
+  sudo: yes
+
+- name: ntp-stop
+  service:
+    name=ntp
+    start=stopped
+  sudo: yes
+
+- name: ntp-restart
+  service:
+    name=ntp
+    state=restarted
+  sudo: yes

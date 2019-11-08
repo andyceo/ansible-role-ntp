@@ -2,7 +2,6 @@
 
 - name: Install ntpd deamon
   apt: pkg=ntp update_cache=yes
-  sudo: yes
 
 - name: Copy ntpd configuration file
   template:
@@ -11,5 +10,4 @@
     mode=0644
     owner=root
     group=root
-  sudo: yes
   notify: ntp-restart
